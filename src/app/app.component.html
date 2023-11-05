@@ -1,37 +1,12 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-  <!-- Next Steps -->
-  <h2>Next Steps</h2>
-  <p>What do you want to do next with your app?</p>
-
   <input type="hidden" #selection>
   <input type="hidden" #papuga>
   <input type="hidden" #itemsSuma>
 
-  <div class="card-container">
-    <button class="card card-small" (click)="selection.value = 'component'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>New Component</span>
-    </button>
-
-    <button class="card card-small" (click)="selection.value = 'build'" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>Build for Production</span>
-    </button>
+  <div>
+    <p class="text card-container"> Przykład funkcji, która zwraca sumę dwóch liczb</p>
   </div>
+  <app-sumat/>
 
-  <!-- Terminal -->
-  <div class="terminal content_consol" [ngSwitch]="selection.value">
-      <pre *ngSwitchDefault>ng generate component xyz</pre>
-      <pre *ngSwitchCase="'build'">{{ items }}</pre>
-  </div>
 
 
 
@@ -47,7 +22,9 @@
   
   </div>
 
-
+  <div>
+    <p class="text card-container"> Przykład funkcji, która zwraca Funkcje</p>
+  </div>
 
   <div class="terminal content_consol" [ngSwitch]="papuga.value">
     <pre *ngSwitchDefault="'Simple'">{{ items[0]}} </pre>
@@ -61,8 +38,5 @@
   </div>
 
 
+  <!-- <router-outlet/> -->
 
-
-
-<router-outlet></router-outlet>
-<app-sumat></app-sumat>

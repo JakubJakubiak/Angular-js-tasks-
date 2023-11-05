@@ -58,7 +58,8 @@ p {
 
 .content {
     display: flex;
-    margin: 82px auto 32px;
+    // margin: 82px auto 32px;
+    margin: 10px auto 32px;
     padding: 0 16px;
     max-width: 960px;
     flex-direction: column;
@@ -280,8 +281,30 @@ svg#clouds {
 
 
 .reply {
-    font-size: 20px;
+    // font-size: 20px;
     color: #ffffff;
+}
+
+.text {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: left;
+    // height: 100vh;
+    color: #000;
+}
+
+.text p {
+    margin: 0;
+}
+
+.elemtsSpacing {
+    display: flex;
+    margin: 2px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Responsive Styles */
@@ -313,4 +336,3 @@ svg#clouds {
         visibility: hidden;
     }
 }
-

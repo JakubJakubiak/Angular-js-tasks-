@@ -45,11 +45,15 @@ export class AppComponent {
 @Component({
   selector: 'app-sumat',
   template: `
-  <div class="content_consol">
-    <input type="number" [(ngModel)]="inputNumber1">
-    <input type="number" [(ngModel)]="inputNumber2">
-    <button (click)="calculatesuma()">Calculate Suma</button>
-    <div *ngIf="sumResult !== undefined">
+  <div class=" reply  content">
+  
+    <pre class="terminal content_consol">{{ items }}</pre>
+
+    <input  class="elemtsSpacing"  type="number" [(ngModel)]="inputNumber1">
+    <input  class="elemtsSpacing"type="number" [(ngModel)]="inputNumber2">
+    <button class="elemtsSpacing" (click)="calculatesuma()">Calculate Suma</button>
+    <!-- <div *ngIf="sumResult !== undefined"> -->
+    <div class="text reply">
       Result: {{ sumResult }}
     </div>
   </div>
@@ -57,7 +61,6 @@ export class AppComponent {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponentSumat {
-
   title = 'suma';
   items: string[] = [` suma(a: number, b: number): number {
     return a + b;
