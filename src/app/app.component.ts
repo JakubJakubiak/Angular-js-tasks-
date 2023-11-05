@@ -14,8 +14,7 @@ export class AppComponent {
       return n * this.factorial(n - 1);
     }
   }
-}`,
-    
+}`,   
     `function factorial(n) {
     return Array.from({length: n},
        (_, i) => i + 1).reduce((a, b) => a * b, 1);
@@ -23,8 +22,8 @@ export class AppComponent {
 ];
 
 
-    inputNumber: number | undefined;
-    factorialResult: number | undefined;
+  inputNumber: number | undefined;
+  factorialResult: number | undefined;
 
   factorial(n: number): number {
     if (n == 0 || n == 1) {
@@ -40,6 +39,45 @@ export class AppComponent {
     }
   }
 
-}
+};
 
 
+@Component({
+  selector: 'app-sumat',
+  template: `
+  <div class="content_consol">
+    <input type="number" [(ngModel)]="inputNumber1">
+    <input type="number" [(ngModel)]="inputNumber2">
+    <button (click)="calculatesuma()">Calculate Suma</button>
+    <div *ngIf="sumResult !== undefined">
+      Result: {{ sumResult }}
+    </div>
+  </div>
+`,
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponentSumat {
+
+  title = 'suma';
+  items: string[] = [` suma(a: number, b: number): number {
+    return a + b;
+  }`,   
+];
+
+
+  inputNumber1: number | undefined;
+  inputNumber2: number | undefined;
+  sumResult: number | undefined;
+
+
+  suma(a: number, b: number): number {
+    return a + b;
+  }
+
+  calculatesuma() {
+    if (this.inputNumber1 && this.inputNumber2) {
+      this.sumResult = this.suma(this.inputNumber1, this.inputNumber2);
+    }
+  }
+
+};
