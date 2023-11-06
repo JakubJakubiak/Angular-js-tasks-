@@ -84,3 +84,45 @@ export class AppComponentSumat {
   }
 
 };
+
+
+@Component({
+  selector: 'Largest-Number',
+  template: `
+  <div class=" reply  content">
+  
+    <pre class="terminal content_consol">{{ items }}</pre>
+    <input  class="elemtsSpacing"  type="number" [(ngModel)]="numbers[0]">
+    <input  class="elemtsSpacing"  type="number" [(ngModel)]="numbers[1]">
+    <input  class="elemtsSpacing"  type="number" [(ngModel)]="numbers[2]">
+    <input  class="elemtsSpacing"  type="number" [(ngModel)]="numbers[3]">
+    <input  class="elemtsSpacing"  type="number" [(ngModel)]="numbers[4]">
+    <button class="elemtsSpacing" (click)="calculatesuma()">display largest number</button>
+
+    <div class="text reply">
+      Result: {{ sumResult }}
+    </div>
+  </div>
+`,
+  styleUrls: ['./app.component.scss']
+})
+export class LargestNumber {
+  title = 'Largest';
+  items: string[] = [`largestNumber(numbers:number[]) {
+    return Math.max.apply(null, numbers);
+  }`,   
+];
+
+  numbers: number[] = [10, 22, 9, 4, 5];
+  sumResult: number | undefined;
+
+  largestNumber(numbers: number[]) {
+    return Math.max.apply(null, numbers);
+  }
+
+  calculatesuma() {
+    if (this.numbers) {
+      this.sumResult = this.largestNumber(this.numbers);
+    }
+  }
+};

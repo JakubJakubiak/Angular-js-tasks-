@@ -3,12 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'; 
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent, AppComponentSumat } from './app.component';
+import {
+  AppComponent,
+  AppComponentSumat,
+  LargestNumber
+} from './app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppComponentSumat
+    AppComponentSumat,
+    LargestNumber
   ],
   imports: [
     BrowserModule,
@@ -16,6 +21,9 @@ import { AppComponent, AppComponentSumat } from './app.component';
     FormsModule  
   ],
   providers: [],
-  bootstrap: [AppComponent, AppComponentSumat]
+  bootstrap: [
+    AppComponent,
+    AppComponentSumat,
+    LargestNumber]
 })
 export class AppModule { }
