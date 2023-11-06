@@ -90,14 +90,13 @@ export class AppComponentSumat {
   selector: 'Largest-Number',
   template: `
   <div class=" reply  content">
+
   
-    <pre class="terminal content_consol">{{ items }}</pre>
-    <input  class="elemtsSpacing"  type="number" [(ngModel)]="numbers[0]">
-    <input  class="elemtsSpacing"  type="number" [(ngModel)]="numbers[1]">
-    <input  class="elemtsSpacing"  type="number" [(ngModel)]="numbers[2]">
-    <input  class="elemtsSpacing"  type="number" [(ngModel)]="numbers[3]">
-    <input  class="elemtsSpacing"  type="number" [(ngModel)]="numbers[4]">
-    <button class="elemtsSpacing" (click)="calculatesuma()">display largest number</button>
+  <pre class="terminal content_consol">{{ items }}</pre>
+  <div *ngFor="let number of numbers; let i = index">
+    <input class="elemtsSpacing" type="number" [(ngModel)]="numbers[i]">
+  </div>
+  <button class="elemtsSpacing" (click)="calculatesuma()">display largest number</button>
 
     <div class="text reply">
       Result: {{ sumResult }}
