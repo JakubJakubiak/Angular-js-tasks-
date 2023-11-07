@@ -3,7 +3,11 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss', './app.componenttext.scss' ]
+  styleUrls: [
+  './scss/app.component.scss',
+  './scss/app.componenttext.scss',
+  './scss/app.componetTerminal.scss'
+  ]
 })
 export class AppComponent {
   title = 'js-tasks';
@@ -58,7 +62,11 @@ export class AppComponent {
     </div>
   </div>
 `,
-  styleUrls: ['./app.component.scss', './app.componenttext.scss' ]
+  styleUrls: [
+    './scss/app.component.scss',
+    './scss/app.componenttext.scss',
+    './scss/app.componetTerminal.scss'
+    ]
 })
 export class AppComponentSumat {
   title = 'suma';
@@ -99,7 +107,11 @@ export class AppComponentSumat {
     </div>
   </div>
 `,
-  styleUrls: ['./app.component.scss', './app.componenttext.scss' ]
+  styleUrls: [
+    './scss/app.component.scss',
+    './scss/app.componenttext.scss',
+    './scss/app.componetTerminal.scss'
+    ]
 })
 export class LargestNumber {
   title = 'Largest';
