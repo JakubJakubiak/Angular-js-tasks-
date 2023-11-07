@@ -6,14 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import {
   AppComponent,
   AppComponentSumat,
-  LargestNumber
+  LargestNumber,
+  TwoNumbersComponent,
 } from './app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppComponentSumat,
-    LargestNumber
+    LargestNumber,
+    
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,8 @@ import {
   bootstrap: [
     AppComponent,
     AppComponentSumat,
-    LargestNumber]
+    LargestNumber,
+    TwoNumbersComponent
+  ]
 })
 export class AppModule { }

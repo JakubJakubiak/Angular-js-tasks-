@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss', './app.componenttext.scss' ]
 })
 export class AppComponent {
   title = 'js-tasks';
@@ -47,7 +47,7 @@ export class AppComponent {
   template: `
   <div class=" reply  content">
   
-    <pre class="terminal content_consol">{{ items }}</pre>
+    <pre class="terminal content_consol">{{ items[1] }}</pre>
 
     <input  class="elemtsSpacing"  type="number" [(ngModel)]="inputNumber1">
     <input  class="elemtsSpacing"type="number" [(ngModel)]="inputNumber2">
@@ -58,24 +58,20 @@ export class AppComponent {
     </div>
   </div>
 `,
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss', './app.componenttext.scss' ]
 })
 export class AppComponentSumat {
   title = 'suma';
   items: string[] = [` suma(a: number, b: number): number {
     return a + b;
-  }`,   
+  }`,  `const suma = (a: number, b: number) => a + b;`
 ];
-
 
   inputNumber1: number | undefined;
   inputNumber2: number | undefined;
   sumResult: number | undefined;
 
-
-  suma(a: number, b: number): number {
-    return a + b;
-  }
+  suma = (a: number, b: number) => a + b;
 
   calculatesuma() {
     if (this.inputNumber1 && this.inputNumber2) {
@@ -103,7 +99,7 @@ export class AppComponentSumat {
     </div>
   </div>
 `,
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss', './app.componenttext.scss' ]
 })
 export class LargestNumber {
   title = 'Largest';
@@ -125,3 +121,24 @@ export class LargestNumber {
     }
   }
 };
+
+export class TwoNumbersComponent {
+  showSumExample: boolean = false;
+  showFactorialExample: boolean = false;
+  showLargestNumberExample: boolean = false;
+
+  // ... inne części kodu
+}
+
+// @Component({
+//   selector: 'app-your-component',
+//   templateUrl: './app.component.html',
+//   styleUrls: ['./app.component.scss']
+// })
+// export class YourComponent {
+//   isCodeVisible: boolean = false;
+
+//   showCode() {
+//     this.isCodeVisible = true;
+//   }
+// }
