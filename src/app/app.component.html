@@ -4,19 +4,6 @@
 
 
 
-  <!-- ////two numbers///// -->
-<!-- 
-  <button class="card card-small" (click)="showFactorialExample = true">
-    <span>Pokaż przykład obliczania silni</span>
-  </button>
-
-
-  <div *ngIf="showFactorialExample">
-    <div>
-      <p class="text card-container"> An example of a function that returns the sum of two numbers</p>
-    </div>
-    <app-sumat/>
-  </div> -->
 
   
   <div>
@@ -25,6 +12,11 @@
   <app-sumat/>
 
   <!-- ////Factorial///// -->
+
+  <div>
+    <p class="text card-container"> Example of a function that returns Factorial</p>
+  </div>
+
   <div class="card-container">
 
     <button class="card card-small" (click)="papuga.value = 'Simple'" tabindex="0">
@@ -37,11 +29,7 @@
   
   </div>
 
-  <div>
-    <p class="text card-container"> Example of a function that returns Factorial</p>
-  </div>
-
-  <div class="terminal content_consol" [ngSwitch]="papuga.value">
+  <div class="terminal content_consol textWhiteContainer" [ngSwitch]="papuga.value">
     <pre *ngSwitchDefault="'Simple'">{{ items[0]}} </pre>
     <pre *ngSwitchCase="'Hard'">{{ items[1]}}</pre>
 
@@ -58,3 +46,4 @@
   <p class="text card-container">Function that will return the largest number from the array</p>
 </div>
 <Largest-Number/>
+

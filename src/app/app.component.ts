@@ -51,7 +51,7 @@ export class AppComponent {
   template: `
   <div class=" reply  content">
   
-    <pre class="terminal content_consol">{{ items[1] }}</pre>
+    <pre class="terminal content_consol textWhiteContainer">{{ items[1] }}</pre>
 
     <input  class="elemtsSpacing"  type="number" [(ngModel)]="inputNumber1">
     <input  class="elemtsSpacing"type="number" [(ngModel)]="inputNumber2">
@@ -93,18 +93,25 @@ export class AppComponentSumat {
 @Component({
   selector: 'Largest-Number',
   template: `
-  <div class=" reply  content">
+  <div class=" reply  content textWhiteContainer">
 
   
-  <pre class="terminal content_consol">{{ items }}</pre>
-  <div *ngFor="let number of numbers; let i = index">
+  <pre class="terminal content_consol">{{ items }}
+  <!-- <div *ngFor="let number of numbers; let i = index">
     <input class="elemtsSpacing" type="number" [(ngModel)]="numbers[i]">
-  </div>
-  <button class="elemtsSpacing" (click)="calculatesuma()">display largest number</button>
+  </div> -->
+  <input class="elemtsSpacing input" type="number" [(ngModel)]="numbers[0]">
+  <input class="elemtsSpacing input" type="number" [(ngModel)]="numbers[1]">
+  <input class="elemtsSpacing input" type="number" [(ngModel)]="numbers[2]">
+  <input class="elemtsSpacing input" type="number" [(ngModel)]="numbers[3]">
+  <input class="elemtsSpacing input" type="number" [(ngModel)]="numbers[4]">
 
-    <div class="text reply">
+  <button class="elemtsSpacing" (click)="calculatesuma()">display largest number</button>
+  
+    <div class="text textWhite reply">
       Result: {{ sumResult }}
     </div>
+    </pre>
   </div>
 `,
   styleUrls: [
@@ -120,7 +127,7 @@ export class LargestNumber {
   }`,   
 ];
 
-  numbers: number[] = [10, 22, 9, 4, 5];
+  numbers: number[] = [10, 22, 9, 4, 15];
   sumResult: number | undefined;
 
   largestNumber(numbers: number[]) {
@@ -134,13 +141,7 @@ export class LargestNumber {
   }
 };
 
-export class TwoNumbersComponent {
-  showSumExample: boolean = false;
-  showFactorialExample: boolean = false;
-  showLargestNumberExample: boolean = false;
 
-  // ... inne części kodu
-}
 
 // @Component({
 //   selector: 'app-your-component',
@@ -154,3 +155,5 @@ export class TwoNumbersComponent {
 //     this.isCodeVisible = true;
 //   }
 // }
+
+

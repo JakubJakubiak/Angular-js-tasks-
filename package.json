@@ -19,8 +19,10 @@
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
     "esbuild": "^0.19.5",
+    "ngx-codemirror": "^1.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "webpack": "^5.89.0",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
