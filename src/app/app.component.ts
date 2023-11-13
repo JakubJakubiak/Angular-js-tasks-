@@ -140,20 +140,3 @@ export class LargestNumber {
     }
   }
 };
-
-
-
-// @Component({
-//   selector: 'app-your-component',
-//   templateUrl: './app.component.html',
-//   styleUrls: ['./app.component.scss']
-// })
-// export class YourComponent {
-//   isCodeVisible: boolean = false;
-
-//   showCode() {
-//     this.isCodeVisible = true;
-//   }
-// }
-
-
