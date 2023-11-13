@@ -1,4 +1,22 @@
-<div>
+<!-- <div>
     <h1>{{ sectionTitle }}</h1>
     <p>{{ sectionContent }}</p>
-  </div>
+</div> -->
+
+<!-- <div>
+    <h1>{{ sectionTitle }}</h1>
+    <div [appDynamicComponent]="dynamicContent"></div>
+</div> -->
+
+<div>
+    <h1>{{ sectionTitle }}</h1>
+    <ng-container #dynamicComponentContainer></ng-container>
+</div>
+
+<!-- content.component.html -->
+<!-- <div>
+    <a routerLink="/sekcja-1">Sekcja 1</a>
+    <a routerLink="/sekcja-2"><Largest-Number/> </a>
+    <a routerLink="/sekcja-3">Sekcja 3</a>
+</div> -->
+  

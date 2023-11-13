@@ -1,49 +1,76 @@
   <input type="hidden" #selection>
   <input type="hidden" #papuga>
   <input type="hidden" #itemsSuma>
-
-
-
-
+  <input type="hidden" #dynamicMenu>
   
+
+<div style="display: flex; align-items: center; justify-content: flex-start;">
+<!-- ///Menu//// -->
   <div>
-    <p class="text card-container"> An example of a function that returns the sum of two numbers</p>
-  </div>
-  <app-sumat/>
-
-  <!-- ////Factorial///// -->
-
-  <div>
-    <p class="text card-container"> Example of a function that returns Factorial</p>
-  </div>
-
-  <div class="card-container">
-
-    <button class="card card-small" (click)="papuga.value = 'Simple'" tabindex="0">
-      <span>Simple way</span>
+    <button class="card card-small" (click)="dynamicMenu.value = 'suma'" tabindex="0">
+      <span>suma</span>
+    </button>
+    
+    <button class="card card-small" (click)="dynamicMenu.value = 'numbers'" tabindex="0">
+      <span>numbers</span>
     </button>
 
-    <button class="card card-small" (click)="papuga.value = 'Hard'" tabindex="0">
-      <span>Hard way</span>
+    <button class="card card-small" (click)="dynamicMenu.value = 'Factorial'" tabindex="0">
+      <span>Factorial</span>
     </button>
-  
+  </div>
   </div>
 
-  <div class="terminal content_consol textWhiteContainer" [ngSwitch]="papuga.value">
-    <pre *ngSwitchDefault="'Simple'">{{ items[0]}} </pre>
-    <pre *ngSwitchCase="'Hard'">{{ items[1]}}</pre>
 
-    <input type="number" [(ngModel)]="inputNumber">
-    <button (click)="calculateFactorial()">Calculate Factorial</button>
-    <div class="reply" *ngIf="factorialResult !== null">
-      Result: {{ factorialResult }}
+<!-- ///Action//// -->
+  
+  <div class="terminal content_consol textWhiteContainer" [ngSwitch]="dynamicMenu.value">
+
+  <pre *ngSwitchDefault="'suma'">
+    <div>
+      <p class="text card-container"> An example of a function that returns the sum of two numbers</p>
     </div>
-  </div>
+    <app-sumat class="text card-container"/>
+  </pre>
+
+  <pre *ngSwitchCase="'numbers'">
+    <div>
+      <p class="text card-container">Function that will return the largest number from the array</p>
+    </div>
+    <Largest-Number/>
+  </pre>
 
 
- <!-- ///LargestNumber///// -->
-<div>
-  <p class="text card-container">Function that will return the largest number from the array</p>
+  <pre *ngSwitchCase="'Factorial'">
+  
+    <div>
+      <p class="text card-container"> Example of a function that returns Factorial</p>
+    </div>
+  
+    <div class="card-container">
+  
+      <button class="card card-small" (click)="papuga.value = 'Simple'" tabindex="0">
+        <span>Simple way</span>
+      </button>
+  
+      <button class="card card-small" (click)="papuga.value = 'Hard'" tabindex="0">
+        <span>Hard way</span>
+      </button>
+    
+    </div>
+  
+    <div class="terminal content_consol textWhiteContainer" [ngSwitch]="papuga.value">
+      <pre *ngSwitchDefault="'Simple'">{{ items[0]}} </pre>
+      <pre *ngSwitchCase="'Hard'">{{ items[1]}}</pre>
+  
+      <input type="number" [(ngModel)]="inputNumber">
+      <button (click)="calculateFactorial()">Calculate Factorial</button>
+      <div class="reply" *ngIf="factorialResult !== null">
+        Result: {{ factorialResult }}
+      </div>
+    </div>
+  
+  </pre>
+
+
 </div>
-<Largest-Number/>
-

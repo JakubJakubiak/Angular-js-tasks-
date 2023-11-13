@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'; 
 import { AppRoutingModule } from './app-routing.module';
 import { MenuComponent } from './menu/menu.component';
-// import { ContentComponent } from './content/content.component';
+import { ContentComponent } from './content/content.component';
 import {
   AppComponent,
   AppComponentSumat,
   LargestNumber,
+  
 } from './app.component';
 
 
@@ -18,6 +19,7 @@ import {
     AppComponentSumat,
     LargestNumber,
     MenuComponent,
+    ContentComponent
 
   ],
   imports: [
@@ -30,6 +32,7 @@ import {
     AppComponent,
     AppComponentSumat,
     LargestNumber,
+    ContentComponent
   ]
 })
 export class AppModule { }
